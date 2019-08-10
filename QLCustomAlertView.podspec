@@ -19,8 +19,8 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "qianlei" => "13698090397@163.com" }
   spec.social_media_url   = "https://www.jianshu.com/u/2808d08f9104"
-  spec.platform     = :ios, "8.0"
-  spec.ios.deployment_target = "8.0"
+  spec.platform     = :ios, "6.0"
+  spec.ios.deployment_target = "6.0"
 
   spec.source       = { :git => "https://github.com/qianleileilei/QLCustomAlertView.git", :tag => spec.version }
   spec.source_files  = "QLCustomAlertView/QLCustomAlertView/Classes/*.{h,m}"
@@ -32,6 +32,6 @@ Pod::Spec.new do |spec|
 
   spec.frameworks = "UIKit", "Foundation"
   spec.requires_arc = true
-  spec.dependency "Masonry", "~> 1.1.0"
+  spec.dependency "Masonry"
 
 end
