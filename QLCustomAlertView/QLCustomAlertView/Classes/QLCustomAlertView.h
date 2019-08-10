@@ -263,12 +263,12 @@ typedef NS_ENUM(NSInteger, QLAlertViewStyle) {
 /**
  before animation and hiding view
  */
-- (void)alertView:(QLCustomAlertView *)alertView willDismissWithButtonIndex:(NSInteger)buttonIndex;
+- (void)willDismissAlertView:(QLCustomAlertView *)alertView;
 
 /**
  after animation
  */
-- (void)alertView:(QLCustomAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
+- (void)didDismissAlertView:(QLCustomAlertView *)alertView;
 
 @end
 

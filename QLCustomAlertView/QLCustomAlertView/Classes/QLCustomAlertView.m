@@ -79,7 +79,7 @@ static QLCustomAlertView *currentAlertView = nil;   //当前显示弹框
             for (NSInteger i = 0; i < otherButtonTitles.count; i++) {
                 QLAlertAction *alertAction = [QLAlertAction actionWithText:otherButtonTitles[i] alertAction:^{
                     __strong __typeof__(weakSelf) strongSelf = weakSelf;
-                    [strongSelf alertButtonClickedAtIndex:i + 1];
+                    [strongSelf alertButtonClickedAtIndex:i + 1 animated:YES];
                 }];
                 alertAction.tag = i + (_cancelButton ? 1 : 0);
                 [self.otherButtonArray addObject:alertAction];
@@ -113,9 +113,9 @@ static QLCustomAlertView *currentAlertView = nil;   //当前显示弹框
 
 
 #pragma mark - event response
-- (void)alertButtonClickedAtIndex:(NSUInteger)index {
+- (void)alertButtonClickedAtIndex:(NSUInteger)index animated:(BOOL)animated {
     __weak __typeof__(self) weakSelf = self;
-    [self dismissWithAnimated:YES completionHandle:^{
+    [self dismissWithAnimated:animated completionHandle:^{
         __strong __typeof__(weakSelf) strongSelf = weakSelf;
         if (strongSelf.delegate && [strongSelf.delegate respondsToSelector:@selector(alertView:clickedButtonAtIndex:)]) {
             [strongSelf.delegate alertView:strongSelf clickedButtonAtIndex:index];
@@ -192,12 +192,23 @@ static QLCustomAlertView *currentAlertView = nil;   //当前显示弹框
     if (self.alertViewStyle == QLAlertViewStyleActionSheet || self.alertViewStyle == QLAlertViewStyleListSheet) {
         self.backgroundView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.1];
         self.containerView.frame = CGRectMake(containerRect.origin.x, CGRectGetMaxY(containerRect), containerRect.size.width, containerRect.size.height);
+        [self presentAlertViewWithTimeIntervalWillShow:YES];
         [UIView animateWithDuration:AnimationTimeInterval animations:^{
             self.backgroundView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
             self.containerView.frame = containerRect;
+        } completion:^(BOOL finished) {
+            [self presentAlertViewWithTimeIntervalWillShow:NO];
         }];
     } else {
-//        [self animationWithView:self.backgroundView duration:0.3];
+        self.containerView.transform = CGAffineTransformMakeScale(0.9, 0.9);
+        self.backgroundView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.1];
+        [self presentAlertViewWithTimeIntervalWillShow:YES];
+        [UIView animateWithDuration:AnimationTimeInterval delay:0.0 usingSpringWithDamping:0.5 initialSpringVelocity:1.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            self.containerView.transform = CGAffineTransformMakeScale(1.0, 1.0);
+            self.backgroundView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+        } completion:^(BOOL finished) {
+            [self presentAlertViewWithTimeIntervalWillShow:NO];
+        }];
     }
     [self.alertWindow makeKeyAndVisible];
     [self.popView contentShouldScrollToBottom];
@@ -213,47 +224,82 @@ static QLCustomAlertView *currentAlertView = nil;   //当前显示弹框
     [self.popView resignFirstResponder];
     if (self.alertViewStyle == QLAlertViewStyleActionSheet || self.alertViewStyle == QLAlertViewStyleListSheet) {
         CGRect containerRect = self.containerView.frame;
+        [self alertViewDismissWillHappen:YES];
         [UIView animateWithDuration:AnimationTimeInterval animations:^{
             self.backgroundView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
             self.containerView.frame = CGRectMake(containerRect.origin.x, CGRectGetMaxY(containerRect) + 10, containerRect.size.width, containerRect.size.height);
         } completion:^(BOOL finished) {
+            [self alertViewDismissWillHappen:NO];
             [self alertViewDestroy];
             if (completion) {
                 completion();
             }
         }];
     } else {
-        [self alertViewDestroy];
-        if (completion) {
-            completion();
-        }
+        [self alertViewDismissWillHappen:YES];
+        [UIView animateWithDuration:0.15 animations:^{
+            self.backgroundView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.0];
+            self.containerView.transform = CGAffineTransformMakeScale(0.9, 0.9);
+        } completion:^(BOOL finished) {
+            [self alertViewDismissWillHappen:NO];
+            [self alertViewDestroy];
+            if (completion) {
+                completion();
+            }
+        }];
     }
 }
 
 //调用这个方法让弹框自动消失（不需要用户手动点击某个button），并执行某一个button下的事件回调
 - (void)dismissWithClickedButtonIndex:(NSInteger)buttonIndex animated:(BOOL)animated {
-    __weak __typeof__(self) weakSelf = self;
-    [self dismissWithAnimated:animated completionHandle:^{
-        __strong __typeof__(weakSelf) strongSelf = weakSelf;
-        if (buttonIndex == 0) {
-            if (strongSelf.cancelButton.alertAction) {
-                strongSelf.cancelButton.alertAction();
-            } else {
-                [strongSelf alertButtonClickedAtIndex:0];
-            }
-        } else if (buttonIndex > 0 && buttonIndex > strongSelf.otherButtonArray.count) {
-            QLAlertAction *action = strongSelf.otherButtonArray[buttonIndex - 1];
-            if (action.alertAction) {
-                action.alertAction();
-            } else {
-                [strongSelf alertButtonClickedAtIndex:buttonIndex];
-            }
+    if (buttonIndex == 0) {
+        if (_delegate && [_delegate respondsToSelector:@selector(alertView:clickedButtonAtIndex:)]) {
+            [self alertButtonClickedAtIndex:0 animated:animated];
+        } else if (self.cancelButton.alertAction) {
+            [self dismissWithAnimated:animated completionHandle:^{
+                self.cancelButton.alertAction();
+            }];
         }
-    }];
+    } else if (buttonIndex > 0 && buttonIndex > self.otherButtonArray.count) {
+        QLAlertAction *action = self.otherButtonArray[buttonIndex - 1];
+        if (_delegate && [_delegate respondsToSelector:@selector(alertView:clickedButtonAtIndex:)]) {
+            [self alertButtonClickedAtIndex:buttonIndex animated:animated];
+        } else if (action.alertAction) {
+            [self dismissWithAnimated:animated completionHandle:^{
+                action.alertAction();
+            }];
+        }
+    }
+}
+
+//弹框出现时机的代理回调
+- (void)presentAlertViewWithTimeIntervalWillShow:(BOOL)willShow {
+    if (willShow) {
+        if (_delegate && [_delegate respondsToSelector:@selector(willPresentAlertView:)]) {
+            [_delegate willPresentAlertView:self];
+        }
+    } else {
+        if (_delegate && [_delegate respondsToSelector:@selector(didPresentAlertView:)]) {
+            [_delegate didPresentAlertView:self];
+        }
+    }
+}
+
+//弹框消失时机的代理回调
+- (void)alertViewDismissWillHappen:(BOOL)willDismiss {
+    if (willDismiss) {
+        if (_delegate && [_delegate respondsToSelector:@selector(willDismissAlertView:)]) {
+            [_delegate willDismissAlertView:self];
+        }
+    } else {
+        if (_delegate && [_delegate respondsToSelector:@selector(didDismissAlertView:)]) {
+            [_delegate didDismissAlertView:self];
+        }
+    }
 }
 
 #pragma mark - 动画效果
-//仿系统alertView的弹出效果
+//alertView的弹出效果
 - (void)animationWithView:(UIView *)view duration:(CFTimeInterval)duration {
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
     animation.duration = duration;
@@ -269,10 +315,6 @@ static QLCustomAlertView *currentAlertView = nil;   //当前显示弹框
     animation.values = values;
     animation.timingFunction = [CAMediaTimingFunction functionWithName: @"easeInEaseOut"];
     [view.layer addAnimation:animation forKey:nil];
-}
-
-- (void)animationWithView {
-    
 }
 
 #pragma mark - 链式调用
@@ -680,7 +722,7 @@ static QLCustomAlertView *currentAlertView = nil;   //当前显示弹框
         __weak __typeof__(self) weakSelf = self;
         _cancelButton = [QLAlertAction actionWithText:nil alertAction:^{
             __strong __typeof__(weakSelf) strongSelf = weakSelf;
-            [strongSelf alertButtonClickedAtIndex:0];
+            [strongSelf alertButtonClickedAtIndex:0 animated:YES];
         }];
         _cancelButton.tag = 0;
     }
