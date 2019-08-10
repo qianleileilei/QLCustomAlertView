@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2668A8E2AB4F76632EF19730 /* Pods_QLCustomAlertView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D38DE7DC5D61758AD23A8FFF /* Pods_QLCustomAlertView.framework */; };
+		3B09547222FE72D10054400D /* DemoAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B09547122FE72D00054400D /* DemoAlertViewController.m */; };
+		3B09547422FE72DF0054400D /* littleMonk in Resources */ = {isa = PBXBuildFile; fileRef = 3B09547322FE72DF0054400D /* littleMonk */; };
+		3B09547E22FE73060054400D /* QLCustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B09547822FE73060054400D /* QLCustomAlertView.m */; };
+		3B09547F22FE73060054400D /* QLDefaultConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B09547922FE73060054400D /* QLDefaultConstants.m */; };
+		3B09548022FE73060054400D /* QLPopCustomBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B09547A22FE73060054400D /* QLPopCustomBaseView.m */; };
+		3B09548122FE73060054400D /* QLAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B09547C22FE73060054400D /* QLAlertAction.m */; };
+		3BA73CBD22FE71F000A0980C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA73CBC22FE71F000A0980C /* AppDelegate.m */; };
+		3BA73CC022FE71F000A0980C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA73CBF22FE71F000A0980C /* ViewController.m */; };
+		3BA73CC322FE71F000A0980C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA73CC122FE71F000A0980C /* Main.storyboard */; };
+		3BA73CC522FE71F200A0980C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA73CC422FE71F200A0980C /* Assets.xcassets */; };
+		3BA73CC822FE71F200A0980C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BA73CC622FE71F200A0980C /* LaunchScreen.storyboard */; };
+		3BA73CCB22FE71F200A0980C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA73CCA22FE71F200A0980C /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C13EA2DF5242DD32EA89299 /* Pods-QLCustomAlertView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QLCustomAlertView.release.xcconfig"; path = "Target Support Files/Pods-QLCustomAlertView/Pods-QLCustomAlertView.release.xcconfig"; sourceTree = "<group>"; };
+		3B09547022FE72D00054400D /* DemoAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoAlertViewController.h; sourceTree = "<group>"; };
+		3B09547122FE72D00054400D /* DemoAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoAlertViewController.m; sourceTree = "<group>"; };
+		3B09547322FE72DF0054400D /* littleMonk */ = {isa = PBXFileReference; lastKnownFileType = file; path = littleMonk; sourceTree = "<group>"; };
+		3B09547622FE73060054400D /* QLPopCustomBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLPopCustomBaseView.h; sourceTree = "<group>"; };
+		3B09547722FE73060054400D /* QLAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLAlertAction.h; sourceTree = "<group>"; };
+		3B09547822FE73060054400D /* QLCustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLCustomAlertView.m; sourceTree = "<group>"; };
+		3B09547922FE73060054400D /* QLDefaultConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLDefaultConstants.m; sourceTree = "<group>"; };
+		3B09547A22FE73060054400D /* QLPopCustomBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLPopCustomBaseView.m; sourceTree = "<group>"; };
+		3B09547B22FE73060054400D /* QLCustomAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLCustomAlertView.h; sourceTree = "<group>"; };
+		3B09547C22FE73060054400D /* QLAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QLAlertAction.m; sourceTree = "<group>"; };
+		3B09547D22FE73060054400D /* QLDefaultConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QLDefaultConstants.h; sourceTree = "<group>"; };
+		3BA73CB822FE71F000A0980C /* QLCustomAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QLCustomAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BA73CBB22FE71F000A0980C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3BA73CBC22FE71F000A0980C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3BA73CBE22FE71F000A0980C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3BA73CBF22FE71F000A0980C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3BA73CC222FE71F000A0980C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3BA73CC422FE71F200A0980C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BA73CC722FE71F200A0980C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BA73CC922FE71F200A0980C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BA73CCA22FE71F200A0980C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B77BC0C6B6C02E898B3033D6 /* Pods-QLCustomAlertView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QLCustomAlertView.debug.xcconfig"; path = "Target Support Files/Pods-QLCustomAlertView/Pods-QLCustomAlertView.debug.xcconfig"; sourceTree = "<group>"; };
+		D38DE7DC5D61758AD23A8FFF /* Pods_QLCustomAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QLCustomAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BA73CB522FE71F000A0980C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2668A8E2AB4F76632EF19730 /* Pods_QLCustomAlertView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3B09547522FE73060054400D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3B09547B22FE73060054400D /* QLCustomAlertView.h */,
+				3B09547822FE73060054400D /* QLCustomAlertView.m */,
+				3B09547622FE73060054400D /* QLPopCustomBaseView.h */,
+				3B09547A22FE73060054400D /* QLPopCustomBaseView.m */,
+				3B09547722FE73060054400D /* QLAlertAction.h */,
+				3B09547C22FE73060054400D /* QLAlertAction.m */,
+				3B09547D22FE73060054400D /* QLDefaultConstants.h */,
+				3B09547922FE73060054400D /* QLDefaultConstants.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3BA73CAF22FE71F000A0980C = {
+			isa = PBXGroup;
+			children = (
+				3BA73CBA22FE71F000A0980C /* QLCustomAlertView */,
+				3BA73CB922FE71F000A0980C /* Products */,
+				AE0E4AE3BEC28E9EFC73E1E1 /* Pods */,
+				C0DECD66BF04D841C56C5D52 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3BA73CB922FE71F000A0980C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BA73CB822FE71F000A0980C /* QLCustomAlertView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BA73CBA22FE71F000A0980C /* QLCustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				3B09547522FE73060054400D /* Classes */,
+				3BA73CBB22FE71F000A0980C /* AppDelegate.h */,
+				3BA73CBC22FE71F000A0980C /* AppDelegate.m */,
+				3BA73CBE22FE71F000A0980C /* ViewController.h */,
+				3BA73CBF22FE71F000A0980C /* ViewController.m */,
+				3B09547022FE72D00054400D /* DemoAlertViewController.h */,
+				3B09547122FE72D00054400D /* DemoAlertViewController.m */,
+				3BA73CC122FE71F000A0980C /* Main.storyboard */,
+				3BA73CC422FE71F200A0980C /* Assets.xcassets */,
+				3B09547322FE72DF0054400D /* littleMonk */,
+				3BA73CC622FE71F200A0980C /* LaunchScreen.storyboard */,
+				3BA73CC922FE71F200A0980C /* Info.plist */,
+				3BA73CCA22FE71F200A0980C /* main.m */,
+			);
+			path = QLCustomAlertView;
+			sourceTree = "<group>";
+		};
+		AE0E4AE3BEC28E9EFC73E1E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B77BC0C6B6C02E898B3033D6 /* Pods-QLCustomAlertView.debug.xcconfig */,
+				0C13EA2DF5242DD32EA89299 /* Pods-QLCustomAlertView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C0DECD66BF04D841C56C5D52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D38DE7DC5D61758AD23A8FFF /* Pods_QLCustomAlertView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BA73CB722FE71F000A0980C /* QLCustomAlertView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BA73CCE22FE71F200A0980C /* Build configuration list for PBXNativeTarget "QLCustomAlertView" */;
+			buildPhases = (
+				1971A0F7AB04377AB28D035C /* [CP] Check Pods Manifest.lock */,
+				3BA73CB422FE71F000A0980C /* Sources */,
+				3BA73CB522FE71F000A0980C /* Frameworks */,
+				3BA73CB622FE71F000A0980C /* Resources */,
+				8828228BF88424213FADBB3F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QLCustomAlertView;
+			productName = QLCustomAlertView;
+			productReference = 3BA73CB822FE71F000A0980C /* QLCustomAlertView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BA73CB022FE71F000A0980C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = qianlei;
+				TargetAttributes = {
+					3BA73CB722FE71F000A0980C = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 3BA73CB322FE71F000A0980C /* Build configuration list for PBXProject "QLCustomAlertView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BA73CAF22FE71F000A0980C;
+			productRefGroup = 3BA73CB922FE71F000A0980C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BA73CB722FE71F000A0980C /* QLCustomAlertView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BA73CB622FE71F000A0980C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BA73CC822FE71F200A0980C /* LaunchScreen.storyboard in Resources */,
+				3B09547422FE72DF0054400D /* littleMonk in Resources */,
+				3BA73CC522FE71F200A0980C /* Assets.xcassets in Resources */,
+				3BA73CC322FE71F000A0980C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1971A0F7AB04377AB28D035C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QLCustomAlertView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8828228BF88424213FADBB3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QLCustomAlertView/Pods-QLCustomAlertView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QLCustomAlertView/Pods-QLCustomAlertView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QLCustomAlertView/Pods-QLCustomAlertView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BA73CB422FE71F000A0980C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B09547F22FE73060054400D /* QLDefaultConstants.m in Sources */,
+				3B09548022FE73060054400D /* QLPopCustomBaseView.m in Sources */,
+				3B09547222FE72D10054400D /* DemoAlertViewController.m in Sources */,
+				3BA73CC022FE71F000A0980C /* ViewController.m in Sources */,
+				3BA73CCB22FE71F200A0980C /* main.m in Sources */,
+				3B09548122FE73060054400D /* QLAlertAction.m in Sources */,
+				3BA73CBD22FE71F000A0980C /* AppDelegate.m in Sources */,
+				3B09547E22FE73060054400D /* QLCustomAlertView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3BA73CC122FE71F000A0980C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BA73CC222FE71F000A0980C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3BA73CC622FE71F200A0980C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BA73CC722FE71F200A0980C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BA73CCC22FE71F200A0980C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3BA73CCD22FE71F200A0980C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BA73CCF22FE71F200A0980C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B77BC0C6B6C02E898B3033D6 /* Pods-QLCustomAlertView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QLCustomAlertView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lei.QLCustomAlertView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BA73CD022FE71F200A0980C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C13EA2DF5242DD32EA89299 /* Pods-QLCustomAlertView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QLCustomAlertView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lei.QLCustomAlertView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BA73CB322FE71F000A0980C /* Build configuration list for PBXProject "QLCustomAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA73CCC22FE71F200A0980C /* Debug */,
+				3BA73CCD22FE71F200A0980C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BA73CCE22FE71F200A0980C /* Build configuration list for PBXNativeTarget "QLCustomAlertView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BA73CCF22FE71F200A0980C /* Debug */,
+				3BA73CD022FE71F200A0980C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BA73CB022FE71F000A0980C /* Project object */;
+}

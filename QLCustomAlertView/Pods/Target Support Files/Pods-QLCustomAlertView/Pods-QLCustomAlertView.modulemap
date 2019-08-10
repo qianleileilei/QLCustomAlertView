@@ -1,0 +1,6 @@
+framework module Pods_QLCustomAlertView {
+  umbrella header "Pods-QLCustomAlertView-umbrella.h"
+
+  export *
+  module * { export * }
+}
