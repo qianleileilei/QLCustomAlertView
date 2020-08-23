@@ -13,7 +13,7 @@ pod "QLCustomAlertView"
 
 ```
 
-### 当前支持一下几种模式
+### 当前支持以下几种不同的显示样式
 
 ```objective-c
 
